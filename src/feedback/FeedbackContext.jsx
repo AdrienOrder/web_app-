@@ -1,6 +1,7 @@
 // src/feedback/FeedbackContext.jsx
 import React, { createContext, useContext, useState } from 'react';
-// Импортируем React и необходимые хуки: createContext (для создания контекста), useContext (для получения данных из контекста), useState (для работы с состоянием).
+// Импортируем React и необходимые хуки: createContext (для создания контекста), useContext (для получения данных из контекста), 
+// useState (для работы с состоянием).
 
 import {
     useGetFeedbacksQuery,
@@ -25,14 +26,17 @@ export const FeedbackProvider = ({ children }) => {
     // Получаем данные отзывов с помощью хука useGetFeedbacksQuery, который отправляет запрос на сервер и возвращает данные.
 
     const [addFeedbackMutation] = useAddFeedbackMutation();
-    // Создаём мутацию для добавления отзыва с помощью хука useAddFeedbackMutation. Этот хук позволяет отправить запрос на сервер для добавления отзыва.
+    // Создаём мутацию для добавления отзыва с помощью хука useAddFeedbackMutation. Этот хук позволяет отправить запрос 
+    // на сервер для добавления отзыва.
 
     const [deleteFeedbackMutation] = useDeleteFeedbackMutation();
-    // Создаём мутацию для удаления отзыва с помощью хука useDeleteFeedbackMutation. Этот хук позволяет отправить запрос на сервер для удаления отзыва.
+    // Создаём мутацию для удаления отзыва с помощью хука useDeleteFeedbackMutation. Этот хук позволяет отправить запрос 
+    // на сервер для удаления отзыва.
 
     // Тестовый режим
     const [useMockData, setUseMockData] = useState(false);
-    // Состояние useMockData управляет режимом тестирования (использование фиктивных данных). Если true, используются тестовые отзывы, если false — данные из API.
+    // Состояние useMockData управляет режимом тестирования (использование фиктивных данных). Если true, используются 
+    // тестовые отзывы, если false — данные из API.
 
     // Тестовые флаги состояний
     const [testState, setTestState] = useState({
@@ -87,7 +91,8 @@ export const FeedbackProvider = ({ children }) => {
         ? []
         : (useMockData ? mockFeedbacks : (query.data || []));
     // Выбираем, какие отзывы показывать: если тестовые отзывы скрыты, показываем пустой массив.
-    // В противном случае, если включен режим тестирования, показываем mockFeedbacks, иначе показываем отзывы из query (данные с сервера).
+    // В противном случае, если включен режим тестирования, показываем mockFeedbacks, иначе показываем отзывы из query 
+    // (данные с сервера).
 
     return (
         <FeedbackContext.Provider
