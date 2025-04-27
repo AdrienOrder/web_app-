@@ -1,0 +1,45 @@
+/* Feedback.css */
+
+/* Общие стили для списка отзывов */
+.feedback-list {
+    padding: 1rem; /* Отступы для списка отзывов */
+    border-radius: 0.5rem; /* Закругление углов */
+}
+
+/* Темная тема для списка отзывов */
+.feedback-list.bg-dark {
+    background-color: #343a40; /* Цвет фона для темной темы */
+    color: white; /* Цвет текста для темной темы */
+}
+
+/* Светлая тема для списка отзывов */
+.feedback-list.bg-light {
+    background-color: #ffffff; /* Цвет фона для светлой темы */
+    color: black; /* Цвет текста для светлой темы */
+}
+
+/* Стили для каждого отзыва */
+.feedback-item {
+    margin-bottom: 0.5rem; /* Отступ снизу для каждого отзыва */
+    padding: 0.5rem; /* Отступы внутри отзыва */
+    border: 1px solid #ccc; /* Граница для отзыва */
+    border-radius: 0.5rem; /* Закругление углов */
+}
+
+/* Стили для формы отзыва */
+.feedback-form {
+    padding: 1rem; /* Отступы для формы */
+    border-radius: 0.5rem; /* Закругление углов */
+}
+
+/* Темная тема для формы отзыва */
+.feedback-form.bg-dark {
+    background-color: #343a40; /* Цвет фона для темной темы */
+    color: white; /* Цвет текста для темной темы */
+}
+
+/* Светлая тема для формы отзыва */
+.feedback-form.bg-light {
+    background-color: #ffffff; /* Цвет фона для светлой темы */
+    color: black; /* Цвет текста для светлой темы */
+}

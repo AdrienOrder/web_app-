@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "sash@mail.ru",
+      "password": "1234",
+      "role": "admin",
+      "blocked": false
+    },
+    {
+      "id": "85d4",
+      "email": "Andrej@mail.ru",
+      "password": "123456",
+      "role": "user",
+      "blocked": false
+    },
+    {
+      "id": "db9f",
+      "email": "boris77@yandex.ru",
+      "password": "12345678",
+      "role": "user",
+      "blocked": false
+    }
+  ],
+  "feedback": [
+    {
+      "id": "f6ae",
+      "name": "Жора",
+      "feedback": "Привет!"
+    }
+  ]
+}

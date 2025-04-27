@@ -1,0 +1,77 @@
+/* Header.css */
+
+/* Общие стили для заголовка */
+.header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Распределяет элементы по краям */
+    align-items: center;
+}
+
+/* Стили для кнопки переключения темы */
+.btn-secondary {
+    background-color: #6c757d; /* Цвет для кнопки переключения темы */
+    color: white;
+    margin-left: auto; /* Перемещает кнопку вправо */
+    margin-right: 10px; /* Задаем отступ справа */
+}
+
+/* Стили для кнопки выхода */
+.btn-danger {
+    background-color: #dc3545; /* Цвет для кнопки выхода */
+    color: white;
+}
+
+/* Стили для кнопки входа */
+.btn-primary {
+    background-color: #007bff; /* Цвет для кнопки входа */
+    color: white;
+}
+
+/* Стили для пользователя */
+.user-email {
+    cursor: pointer;
+    text-decoration: underline; /* Подчеркивание для кликабельного текста */
+}
+
+/* Темная тема */
+.bg-dark {
+    background-color: #343a40; /* Цвет фона для темной темы */
+}
+
+.text-white {
+    color: rgb(255, 255, 255); /* Цвет текста для темной темы */
+}
+
+/* Светлая тема */
+.bg-light {
+    background-color: #ffffff; /* Цвет фона для светлой темы */
+}
+
+.text-dark {
+    color: black; /* Цвет текста для светлой темы */
+}
+
+/* Header.css */
+.nav-link-a {
+    color: inherit; /* Убираем стандартный цвет ссылки */
+    margin-left: 30px; /* Задаем отступ справа */
+    font-size: 20px; /* Увеличиваем размер шрифта */
+}
+
+.nav-link-a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Header.css */
+.nav-link-h {
+    color: inherit; /* Убираем стандартный цвет ссылки */
+    margin-left: 25px; /* Задаем отступ справа */
+    font-size: 20px; /* Увеличиваем размер шрифта */
+}
+
+.nav-link-h:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+

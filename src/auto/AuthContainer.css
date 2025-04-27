@@ -1,0 +1,25 @@
+/* src/components/AuthContainer.css */
+
+.auth-container {
+    max-width: 600px; /* Максимальная ширина контейнера */
+    margin: 13rem auto; /* Центрируем контейнер по горизонтали и добавляем отступ сверху */
+    padding: 2rem; /* Добавляем внутренние отступы */
+    border-radius: 8px; /* Закругляем углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+/* src/components/AuthForm.css */
+
+.auth-form {
+    padding: 1.5rem; /* Внутренние отступы */
+    border-radius: 8px; /* Закругление углов */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.auth-form .form-label {
+    font-weight: bold; /* Жирный шрифт для меток */
+}
+
+.auth-form .form-control {
+    margin-bottom: 1rem; /* Отступ между полями */
+}
