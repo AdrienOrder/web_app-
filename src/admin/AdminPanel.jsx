@@ -262,7 +262,7 @@ const AdminPanel = () => {
                     <input
                         type="email"
                         className="form-control"
-                        placeholder="Email"
+                        placeholder="Электронная почта"
                         value={newUser.email}
                         onChange={(e) => setNewUser({ ...newUser, email: e.target.value })} // Обновляем email в состоянии
                     />

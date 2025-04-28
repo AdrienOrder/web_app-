@@ -9,8 +9,8 @@ describe('About component', () => {
 
         // Проверяем, что текст отображается
         expect(screen.getByText('О себе')).toBeInTheDocument();
-        expect(screen.getByText('Меня зовут Саша. Я кто-то.')).toBeInTheDocument();
-        expect(screen.getByText('В этом приложении вы можете что-то.')).toBeInTheDocument();
+        expect(screen.getByText('about')).toBeInTheDocument();
+        expect(screen.getByText('ABOUT')).toBeInTheDocument();
     });
 
     test('кнопка "Нажми меня" отключена по умолчанию', () => {
