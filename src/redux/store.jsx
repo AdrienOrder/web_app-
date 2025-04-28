@@ -13,8 +13,7 @@ export const store = configureStore({
         // Указываем редьюсеры для обработки состояния приложения.
 
         [feedbackApi.reducerPath]: feedbackApi.reducer,
-        // Добавляем редьюсер для feedbackApi. Используем динамическое имя редьюсера, основанное на пути reducerPath 
-        // из feedbackApi.
+        // Добавляем редьюсер для feedbackApi. Используем динамическое имя редьюсера, основанное на пути reducerPath из feedbackApi.
     },
 
     middleware: (getDefaultMiddleware) =>

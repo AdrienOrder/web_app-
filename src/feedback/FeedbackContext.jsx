@@ -1,7 +1,7 @@
 // src/feedback/FeedbackContext.jsx
 import React, { createContext, useContext, useState } from 'react';
-// Импортируем React и необходимые хуки: createContext (для создания контекста), useContext (для получения данных из контекста), 
-// useState (для работы с состоянием).
+// Импортируем React и необходимые хуки: createContext (для создания контекста), 
+// useContext (для получения данных из контекста), useState (для работы с состоянием).
 
 import {
     useGetFeedbacksQuery,
@@ -35,8 +35,8 @@ export const FeedbackProvider = ({ children }) => {
 
     // Тестовый режим
     const [useMockData, setUseMockData] = useState(false);
-    // Состояние useMockData управляет режимом тестирования (использование фиктивных данных). Если true, используются 
-    // тестовые отзывы, если false — данные из API.
+    // Состояние useMockData управляет режимом тестирования (использование фиктивных данных). 
+    // Если true, используются тестовые отзывы, если false — данные из API.
 
     // Тестовые флаги состояний
     const [testState, setTestState] = useState({

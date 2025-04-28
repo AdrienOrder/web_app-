@@ -38,7 +38,7 @@ const AuthForm = ({ isLogin, onSwitchToLogin }) => { // Компонент AuthF
                         required: "Это поле обязательно",  // Обязательное поле 
                         pattern: {
                             value: /^[a-zA-Z0-9._%+-]+@(mail\.ru|gmail\.com|yandex\.ru)$/,  // Шаблон для проверки формата email 
-                            message: "Электронная почта должна быть в формате: example@mail.ru или example@gmail.com"  // Сообщение об ошибке при несоответствии формату 
+                            message: "Электронная почта должна быть в формате: yandex.ru, example@mail.ru или example@gmail.com"  // Сообщение об ошибке при несоответствии формату 
                         }
                     })}
                     isInvalid={!!errors.email}  // Проверка на наличие ошибок в поле email 
