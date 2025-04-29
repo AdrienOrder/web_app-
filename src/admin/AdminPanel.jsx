@@ -100,19 +100,27 @@ const AdminPanel = () => {
     }, []);
 
     // Функция для блокировки/разблокировки пользователя
-    const handleBlock = useCallback(async (userId, isBlocked) => {
+    const handleBlock = useCallback(async (userId, isBlocked, userRoleToBlock) => {
         try {
+            // Проверяем, является ли пользователь, которого блокируют, админом
+            if (userRoleToBlock === 'admin') {
+                alert('Нельзя заблокировать администратора');
+                return;
+            }
+    
             const response = await fetch(`http://localhost:5000/users/${userId}`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ blocked: !isBlocked }) // Меняем статус блокировки
+                body: JSON.stringify({ blocked: !isBlocked })
             });
-            if (!response.ok) throw new Error('Ошибка при изменении блокировки'); // Обрабатываем ошибку
+            
+            if (!response.ok) throw new Error('Ошибка при изменении блокировки');
+            
             setUsers(prev =>
-                prev.map(user => user.id === userId ? { ...user, blocked: !isBlocked } : user) // Обновляем список пользователей
+                prev.map(user => user.id === userId ? { ...user, blocked: !isBlocked } : user)
             );
         } catch (err) {
-            alert(err.message); // Показываем ошибку
+            alert(err.message);
         }
     }, []);
 
@@ -157,9 +165,10 @@ const AdminPanel = () => {
                     >
                         Удалить
                     </button>
+
                     <button
                         className={`btn ${row.original.blocked ? 'btn-success' : 'btn-warning'} btn-sm ms-2`}
-                        onClick={() => handleBlock(row.original.id, row.original.blocked)} // Кнопка для блокировки/разблокировки
+                        onClick={() => handleBlock(row.original.id, row.original.blocked, row.original.role)}
                     >
                         {row.original.blocked ? 'Разблокировать' : 'Заблокировать'}
                     </button>
