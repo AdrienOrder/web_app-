@@ -108,7 +108,7 @@ const About = () => {
                     disabled={isButtonDisabled} // отключена, если состояние = true
                     className="btn btn-secondary" // стиль
                     style={{
-                        backgroundColor: isButtonDisabled ? '#f0f0f0' : buttonColor, 
+                        backgroundColor: isButtonDisabled ? '#f0f0f0' :  '#a3a3a3', 
                         // используем тот же цвет, что и в основной кнопке
                         color: isButtonDisabled ? '#888' : 'white',
                         width: buttonWidth,
